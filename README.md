@@ -3,6 +3,8 @@ Colors from the [KIT coporate design color scheme](https://www.sek.kit.edu/downl
 
 ![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/example.png)
 
+The RGB values listed in the image are integers from 0 to 255, taken from the corporate design guide. These values are then  divided by 255 and consequently lie between 0 and 1. This is the format that [matplotlib](https://matplotlib.org/) needs.
+
 ## Install (assuming the usage of ZSH)
 ```bash
 cd ~
