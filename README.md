@@ -1,4 +1,4 @@
-# kitcolors
+# kitcolors --- Colors of the Karlsruhe Insititute of Technology
 Colors from the [KIT coporate design color scheme](https://www.sek.kit.edu/downloads/dokumente-pkm/2_Gestaltungsgrundlagen_Farben.pdf). 
 
 ![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/example.png)
