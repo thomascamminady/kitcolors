@@ -90,4 +90,4 @@ if __name__ == "__main__":
     ax.set_ylim([-2, 22])
     plt.tight_layout()
     plt.axis("off")
-    plt.savefig("example.png")
+    plt.savefig("scripts/example.png")

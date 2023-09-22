@@ -13,7 +13,7 @@ pip install kitcolors
 
 
 ## Usage in Python
-All colors have `.RGB`, `.rgb`, and `.hex` properties.
+All colors have `.RGB`, `.rgb`, and `.hex` attributes.
 Furthermore, there exist `.RGBa`, `.rgba`, and `.hexa` methods that take `alpha` as an additional argument.
 
 
