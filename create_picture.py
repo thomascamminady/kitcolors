@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from kitcolors import all_colors
 
@@ -29,9 +28,26 @@ if __name__ == "__main__":
             verticalalignment="center",
         )
 
-        for j, alpha in enumerate(np.linspace(1.0, 0.1, 10)):
+        for j, alpha in enumerate(
+            [
+                1.0,
+                0.9,
+                0.8,
+                0.7,
+                0.6,
+                0.5,
+                0.4,
+                0.3,
+                0.2,
+                0.1,
+            ]
+        ):
             ax.scatter(
-                0.8 * j, mm - 2 * i, s=6200, color=color.rgba(alpha), alpha=alpha
+                0.8 * j,
+                mm - 2 * i,
+                s=6200,
+                color=color.rgba(alpha),
+                alpha=alpha,
             )
             if i == 0:
                 ax.text(

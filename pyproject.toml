@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kitcolors"
-version = "0.5.0"
+version = "0.6.0"
 description = ""
 authors = ["Thomas <0milieux_member@icloud.com>"]
 readme = "README.md"
@@ -10,7 +10,6 @@ python = ">=3.9,<3.13"
 
 
 [tool.poetry.group.dev.dependencies]
-numpy = "^1.26.0"
 matplotlib = "^3.8.0"
 
 [build-system]
