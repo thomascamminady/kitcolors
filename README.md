@@ -1,10 +1,12 @@
 # Colors of the Karlsruhe Institute of Technology
 
-Colors from the [KIT coporate design color scheme](https://www.sek.kit.edu/downloads/dokumente-pkm/2_Gestaltungsgrundlagen_Farben.pdf). 
+Colors from the [KIT corporate design color scheme](https://www.sek.kit.edu/downloads/dokumente-pkm/2_Gestaltungsgrundlagen_Farben.pdf).
 
 ![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/scripts/example.png)
 
-The RGB values listed in the image are integers from 0 to 255, taken from the corporate design guide. These values are then  divided by 255 and consequently lie between 0 and 1. This is the format that [matplotlib](https://matplotlib.org/) needs.
+The RGB values listed in the image are integers from 0 to 255, taken from the corporate design guide.
+These values are then divided by 255 and consequently lie between 0 and 1.
+This is the format that [matplotlib](https://matplotlib.org/) needs.
 
 ## Install
 
@@ -12,11 +14,10 @@ The RGB values listed in the image are integers from 0 to 255, taken from the co
 pip install kitcolors
 ```
 
-
 ## Usage in Python
 
-All colors have `.RGB`, `.rgb`, and `.hex` attributes.
-Furthermore, there exist `.RGBa`, `.rgba`, and `.hexa` methods that take `alpha` as an additional argument.
+All colors have `RGB`, `rgb`, and `hex` attributes.
+Furthermore, there exist `RGBa`, `rgba`, and `hexa` methods that take `alpha` as an additional argument.
 
 ```python
 >>> from kitcolors import green
