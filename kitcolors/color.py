@@ -18,23 +18,26 @@ class Color:
     rgb: tuple[float, float, float] = field(init=False)
     hex: str = field(init=False)
 
-    def __post_init__(self) -> None:
-        _RED, _GREEN, _BLUE = self.RGB
-        if not (0 <= _RED <= 255 and 0 <= _GREEN <= 255 and 0 <= _BLUE <= 255):
-            raise ColorValueError(
-                "RGB values must be in the range [0, 255], "
-                f"but are ({_RED},{_GREEN},{_BLUE})"
-            )
-
-        self.rgb = (_RED / 255, _GREEN / 255, _BLUE / 255)
-        self.hex = f"#{int(_RED):02X}{int(_GREEN):02X}{int(_BLUE):02X}"
-
     @staticmethod
     def _validate_alpha(alpha: float) -> None:
         if not 0 <= alpha <= 1:
             raise AlphaValueError(
                 f"Alpha value must be in the range [0, 1], but is {alpha}"
             )
+
+    @staticmethod
+    def _validate_rgb(red: int, green: int, blue: int) -> None:
+        if not (0 <= red <= 255 and 0 <= green <= 255 and 0 <= blue <= 255):
+            raise ColorValueError(
+                "RGB values must be in the range [0, 255], "
+                f"but are ({red},{green},{blue})"
+            )
+
+    def __post_init__(self) -> None:
+        red, green, blue = self.RGB
+        self._validate_rgb(red, green, blue)
+        self.rgb = (red / 255, green / 255, blue / 255)
+        self.hex = f"#{int(red):02X}{int(green):02X}{int(blue):02X}"
 
     def RGBa(self, alpha: float) -> tuple[int, int, int, float]:
         """RGB values of this color (in the range [0,255]) and alpha value."""
