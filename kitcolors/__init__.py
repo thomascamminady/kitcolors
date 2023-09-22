@@ -51,7 +51,7 @@ purple = Color((163, 16, 124))
 cyan = Color((35, 161, 224))
 
 
-colors = {
+all_colors = {
     "white": white,
     "black": black,
     "green": green,

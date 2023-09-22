@@ -38,6 +38,7 @@ Furthermore, there exist `.RGBa`, `.rgba`, and `.hexa` methods that take `alpha`
 
 
 ## Overview
+Because sometimes, you just need some values.
 ```
 white; 255 255 255; #ffffff
 black; 0 0 0; #000000
