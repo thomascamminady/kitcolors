@@ -28,7 +28,7 @@ Furthermore, there exist `.RGBa`, `.rgba`, and `.hexa` methods that take `alpha`
 '#009682'
 >>> green.rgba(0.2)
 (0.0, 0.5882352941176471, 0.5098039215686274, 0.2)
->>> green.RGBA(0.2)
+>>> green.RGBa(0.2)
 (0, 150, 130, 0.2)
 >>> green.hexa(0.2)
 '#00968233'
