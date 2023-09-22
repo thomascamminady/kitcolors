@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kitcolors"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Thomas <0milieux_member@icloud.com>"]
 readme = "README.md"
