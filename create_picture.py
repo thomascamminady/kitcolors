@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
-from kitcolors import all_colors
+from kitcolors import kitcolors
 
 if __name__ == "__main__":
     fig, ax = plt.subplots(1, 1, figsize=(20, 15))
     mm = 19
-    for i, (name, color) in enumerate(all_colors.items()):
+    for i, (name, color) in enumerate(kitcolors.items()):
         ax.text(
             -0.8,
             mm - 2 * i,

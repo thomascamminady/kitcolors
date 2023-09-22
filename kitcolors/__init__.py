@@ -5,6 +5,7 @@ from dataclasses import dataclass
 class Color:
     """RGB values of the KIT color scheme."""
 
+    name: str
     _RGB: tuple[int, int, int]
 
     @property
@@ -38,20 +39,20 @@ class Color:
         return f"{self.hex}{int(alpha * 255):02X}"
 
 
-white = Color((255, 255, 255))
-black = Color((0, 0, 0))
-green = Color((0, 150, 130))
-blue = Color((70, 100, 170))
-maygreen = Color((140, 182, 60))
-yellow = Color((252, 229, 0))
-orange = Color((223, 155, 27))
-brown = Color((167, 130, 46))
-red = Color((162, 34, 35))
-purple = Color((163, 16, 124))
-cyan = Color((35, 161, 224))
+white = Color("white", (255, 255, 255))
+black = Color("black", (0, 0, 0))
+green = Color("green", (0, 150, 130))
+blue = Color("blue", (70, 100, 170))
+maygreen = Color("maygren", (140, 182, 60))
+yellow = Color("yellow", (252, 229, 0))
+orange = Color("orange", (223, 155, 27))
+brown = Color("brown", (167, 130, 46))
+red = Color("red", (162, 34, 35))
+purple = Color("purple", (163, 16, 124))
+cyan = Color("cyan", (35, 161, 224))
 
 
-all_colors = {
+kitcolors = {
     "white": white,
     "black": black,
     "green": green,
