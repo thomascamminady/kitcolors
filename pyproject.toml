@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "kitcolors"
+version = "0.1.0"
+description = ""
+authors = ["Thomas <0milieux_member@icloud.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+
+
+[tool.poetry.group.dev.dependencies]
+numpy = "^1.26.0"
+matplotlib = "^3.8.0"
+ipykernel = "^6.25.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
