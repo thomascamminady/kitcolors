@@ -3,7 +3,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class Color:
-    """RGB values of the KIT color scheme."""
+    """Simple color class."""
 
     name: str
     RGB: tuple[int, int, int]
