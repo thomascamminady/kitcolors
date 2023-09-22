@@ -13,14 +13,28 @@ pip install kitcolors
 
 
 ## Usage in Python
+All colors have `.RGB`, `.rgb`, and `.hex` properties.
+Furthermore, there exist `.RGBa`, `.rgba`, and `.hexa` methods that take `alpha` as an additional argument.
+
+
 ```python
->>> from kitcolors import green, purple10
->>> print(green)
-(0.0, 0.5882352941, 0.5098039216, 1.0)
->>> print(purple10) # each color exists with an alpha down to 0% in steps of 1%
-(0.6392156863, 0.062745098, 0.4862745098, 0.1)
+
+>>> from kitcolors import green
+>>> green.rgb
+(0.0, 0.5882352941176471, 0.5098039215686274)
+>>> green.RGB
+(0, 150, 130)
+>>> green.hex
+'#009682'
+>>> green.rgba(0.2)
+(0.0, 0.5882352941176471, 0.5098039215686274, 0.2)
+>>> green.RGBA(0.2)
+(0, 150, 130, 0.2)
+>>> green.hexa(0.2)
+'#00968233'
 
 ```
+
 
 
 ## Overview
