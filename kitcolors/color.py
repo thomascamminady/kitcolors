@@ -63,7 +63,7 @@ class Color:
         else:
             red, green, blue, white = (*self.RGB, 255)
 
-            def interpolate(color: float):
+            def interpolate(color: int) -> float:
                 return alpha * color + (1 - alpha) * white
 
             return (interpolate(red), interpolate(green), interpolate(blue))
@@ -90,7 +90,7 @@ class Color:
         else:
             red, green, blue, white = (*self.rgb, 1.0)
 
-            def interpolate(color: float):
+            def interpolate(color: float) -> float:
                 return alpha * color + (1 - alpha) * white
 
             return (interpolate(red), interpolate(green), interpolate(blue))
