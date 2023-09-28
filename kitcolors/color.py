@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import overload, Literal
 
 
 class ColorValueError(ValueError):
@@ -39,15 +40,52 @@ class Color:
         self.rgb = (red / 255, green / 255, blue / 255)
         self.hex = f"#{int(red):02X}{int(green):02X}{int(blue):02X}"
 
-    def RGBa(self, alpha: float) -> tuple[int, int, int, float]:
+    @overload
+    def RGBa(
+        self, alpha: float, transparent: Literal[False]
+    ) -> tuple[float, float, float]:
+        ...
+
+    @overload
+    def RGBa(
+        self, alpha: float, transparent: Literal[True]
+    ) -> tuple[int, int, int, float]:
+        ...
+
+    def RGBa(
+        self, alpha: float, transparent: bool = True
+    ) -> tuple[float, float, float] | tuple[int, int, int, float]:
         """RGB values of this color (in the range [0,255]) and alpha value."""
         self._validate_alpha(alpha)
-        return (*self.RGB, alpha)
 
-    def rgba(self, alpha: float) -> tuple[float, float, float, float]:
+        if transparent:
+            return (*self.RGB, alpha)
+        else:
+            red, green, blue = self.RGB
+            return (alpha * red, alpha * green, alpha * blue)
+
+    @overload
+    def rgba(
+        self, alpha: float, transparent: Literal[False]
+    ) -> tuple[float, float, float]:
+        ...
+
+    @overload
+    def rgba(
+        self, alpha: float, transparent: Literal[True]
+    ) -> tuple[float, float, float, float]:
+        ...
+
+    def rgba(
+        self, alpha: float, transparent: bool = True
+    ) -> tuple[float, float, float] | tuple[float, float, float, float]:
         """RGB values of this color (in the range [0,1]) and alpha value."""
         self._validate_alpha(alpha)
-        return (*self.rgb, alpha)
+        if transparent:
+            return (*self.rgb, alpha)
+        else:
+            red, green, blue = self.rgb
+            return (alpha * red, alpha * green, alpha * blue, 1.0)
 
     def hexa(self, alpha: float) -> str:
         """Hex value of the color, including alpha."""
