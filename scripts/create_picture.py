@@ -46,7 +46,7 @@ if __name__ == "__main__":
                 0.8 * j,
                 mm - 2 * i,
                 s=6200,
-                color=color.rgba(alpha),
+                color=color.rgba(alpha=alpha, transparent=False),
                 alpha=alpha,
             )
             if i == 0:

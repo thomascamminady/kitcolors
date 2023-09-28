@@ -11,7 +11,7 @@ def test_equivalence_transparent_nontransparent_rgb(
     rgb = color.rgba(alpha, transparent=False)
 
     for i in range(3):
-        assert rgba[i] * rgba[-1] == rgb[i]
+        assert rgba[i] * rgba[-1] + 1 * (1 - rgba[-1]) == rgb[i]
 
 
 @pytest.mark.parametrize("alpha", [0.0, 0.1, 0.5, 0.9, 1.0])
@@ -23,7 +23,7 @@ def test_equivalence_transparent_nontransparent_RGB(
     RGB = color.RGBa(alpha, transparent=False)
 
     for i in range(3):
-        assert RGBa[i] * RGBa[-1] == RGB[i]
+        assert RGBa[i] * RGBa[-1] + 255 * (1 - RGBa[-1]) == RGB[i]
 
 
 @pytest.mark.parametrize(

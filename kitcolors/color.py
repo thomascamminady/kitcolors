@@ -62,7 +62,12 @@ class Color:
             return (*self.RGB, alpha)
         else:
             red, green, blue = self.RGB
-            return (alpha * red, alpha * green, alpha * blue)
+            white = 255
+            return (
+                alpha * red + (1 - alpha) * white,
+                alpha * green + (1 - alpha) * white,
+                alpha * blue + (1 - alpha) * white,
+            )
 
     @overload
     def rgba(
@@ -85,7 +90,12 @@ class Color:
             return (*self.rgb, alpha)
         else:
             red, green, blue = self.rgb
-            return (alpha * red, alpha * green, alpha * blue, 1.0)
+            white = 1.0
+            return (
+                alpha * red + (1 - alpha) * white,
+                alpha * green + (1 - alpha) * white,
+                alpha * blue + (1 - alpha) * white,
+            )
 
     def hexa(self, alpha: float) -> str:
         """Hex value of the color, including alpha."""
