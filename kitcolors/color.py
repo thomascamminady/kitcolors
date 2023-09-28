@@ -61,13 +61,12 @@ class Color:
         if transparent:
             return (*self.RGB, alpha)
         else:
-            red, green, blue = self.RGB
-            white = 255
-            return (
-                alpha * red + (1 - alpha) * white,
-                alpha * green + (1 - alpha) * white,
-                alpha * blue + (1 - alpha) * white,
-            )
+            red, green, blue, white = (*self.RGB, 255)
+
+            def interpolate(color: float):
+                return alpha * color + (1 - alpha) * white
+
+            return (interpolate(red), interpolate(green), interpolate(blue))
 
     @overload
     def rgba(
@@ -89,13 +88,12 @@ class Color:
         if transparent:
             return (*self.rgb, alpha)
         else:
-            red, green, blue = self.rgb
-            white = 1.0
-            return (
-                alpha * red + (1 - alpha) * white,
-                alpha * green + (1 - alpha) * white,
-                alpha * blue + (1 - alpha) * white,
-            )
+            red, green, blue, white = (*self.rgb, 1.0)
+
+            def interpolate(color: float):
+                return alpha * color + (1 - alpha) * white
+
+            return (interpolate(red), interpolate(green), interpolate(blue))
 
     def hexa(self, alpha: float) -> str:
         """Hex value of the color, including alpha."""
