@@ -86,8 +86,8 @@ if __name__ == "__main__":
         fontweight="bold",
     )
 
-    ax.set_xlim([-1, 9.6])
-    ax.set_ylim([-2, 22])
+    ax.set_xlim(-1, 9.6)
+    ax.set_ylim(-2, 22)
     plt.tight_layout()
     plt.axis("off")
     plt.savefig("scripts/example.png")
