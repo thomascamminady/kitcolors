@@ -19,7 +19,7 @@ cyan,       35 161 224,     #23a1e0
 
 
 ## About
-Colors from the [KIT corporate design color scheme](https://www.sek.kit.edu/downloads/dokumente-pkm/2_Gestaltungsgrundlagen_Farben.pdf).
+Colors from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
 
 ![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/scripts/example.png)
 
