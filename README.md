@@ -17,6 +17,57 @@ purple,     163 16 124,     #a3107c
 cyan,       35 161 224,     #23a1e0
 ```
 
+Here's a list of strings for HEX:
+```
+[
+  "#ffffff", // white
+  "#000000", // black
+  "#009682", // green
+  "#4664aa", // blue
+  "#8cb63c", // maygreen
+  "#fce500", // yellow
+  "#df9b1b", // orange
+  "#a7822e", // brown
+  "#a22223", // red
+  "#a3107c", // purple
+  "#23a1e0", // cyan
+]
+```
+Here's a dictionary for HEX:
+```
+colors = {
+    "white": "#ffffff",
+    "black": "#000000",
+    "green": "#009682",
+    "blue": "#4664aa",
+    "maygreen": "#8cb63c",
+    "yellow": "#fce500",
+    "orange": "#df9b1b",
+    "brown": "#a7822e",
+    "red": "#a22223",
+    "purple": "#a3107c",
+    "cyan": "#23a1e0",
+}
+
+```
+
+Here's some LaTeX code:
+```
+\usepackage{xcolor}
+
+\definecolor{white}{RGB}{255,255,255}
+\definecolor{black}{RGB}{0,0,0}
+\definecolor{green}{RGB}{0,150,130}
+\definecolor{blue}{RGB}{0,100,170}
+\definecolor{maygreen}{RGB}{140,182,60}
+\definecolor{yellow}{RGB}{252,229,0}
+\definecolor{orange}{RGB}{223,155,27}
+\definecolor{brown}{RGB}{167,130,46}
+\definecolor{red}{RGB}{162,34,35}
+\definecolor{purple}{RGB}{163,16,124}
+\definecolor{cyan}{RGB}{35,161,224}
+```
+
 
 ## About
 Colors from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
