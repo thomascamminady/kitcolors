@@ -17,6 +17,15 @@ purple,     163 16 124,     #a3107c
 cyan,       35 161 224,     #23a1e0
 ```
 
+
+
+## About
+Colors from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
+
+![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/scripts/example.png)
+
+
+
 Here's a list of strings for HEX:
 ```
 [
@@ -69,14 +78,14 @@ Here's some LaTeX code:
 ```
 
 
-## About
-Colors from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
 
-![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/scripts/example.png)
 
 The RGB values listed in the image are integers from 0 to 255, taken from the corporate design guide.
 These values are then divided by 255 and consequently lie between 0 and 1.
 This is the format that [matplotlib](https://matplotlib.org/) needs.
+
+
+
 
 ## Install
 
