@@ -47,17 +47,17 @@ Here's a dictionary for RGB:
 Here's a list of strings for HEX:
 ```python
 [
-  "#ffffff", // white
-  "#000000", // black
-  "#009682", // green
-  "#4664aa", // blue
-  "#8cb63c", // maygreen
-  "#fce500", // yellow
-  "#df9b1b", // orange
-  "#a7822e", // brown
-  "#a22223", // red
-  "#a3107c", // purple
-  "#23a1e0", // cyan
+  "#ffffff", # white
+  "#000000", # black
+  "#009682", # green
+  "#4664aa", # blue
+  "#8cb63c", # maygreen
+  "#fce500", # yellow
+  "#df9b1b", # orange
+  "#a7822e", # brown
+  "#a22223", # red
+  "#a3107c", # purple
+  "#23a1e0", # cyan
 ]
 ```
 Here's a dictionary for HEX:
