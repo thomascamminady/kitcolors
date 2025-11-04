@@ -1,6 +1,6 @@
 
 
-# Colors of the Karlsruhe Institute of Technology
+# Colors of the Karlsruhe Institute of Technology (inofficial)
 
 
 
