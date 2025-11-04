@@ -2,32 +2,50 @@
 
 # Colors of the Karlsruhe Institute of Technology
 
-TL;DR: Sometimes, all you need are copyable RGB/HEX values.
-```csv
-white,      255 255 255,    #ffffff
-black,      0 0 0,          #000000
-green,      0 150 130,      #009682
-blue,       0 100 170,      #4664aa
-maygreen,   140 182 60,     #8cb63c
-yellow,     252 229 0,      #fce500
-orange,     223 155 27,     #df9b1b
-brown,      167 130 46,     #a7822e
-red,        162 34 35,      #a22223
-purple,     163 16 124,     #a3107c
-cyan,       35 161 224,     #23a1e0
-```
 
 
-
-## About
-Colors from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
+Taken from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
 
 ![Example of colors.](https://raw.githubusercontent.com/camminady/kitcolors/master/scripts/example.png)
 
 
+Here's a list of tuples for RGB:
+```python
+[
+  (255, 255, 255),  # white
+  (0, 0, 0),        # black
+  (0, 150, 130),    # green
+  (0, 100, 170),    # blue
+  (140, 182, 60),   # maygreen
+  (252, 229, 0),    # yellow
+  (223, 155, 27),   # orange
+  (167, 130, 46),   # brown
+  (162, 34, 35),    # red
+  (163, 16, 124),   # purple
+  (35, 161, 224),   # cyan
+]
+```
+
+Here's a dictionary for RGB:
+```python
+{
+    "white": (255, 255, 255),
+    "black": (0, 0, 0),
+    "green": (0, 150, 130),
+    "blue": (0, 100, 170),
+    "maygreen": (140, 182, 60),
+    "yellow": (252, 229, 0),
+    "orange": (223, 155, 27),
+    "brown": (167, 130, 46),
+    "red": (162, 34, 35),
+    "purple": (163, 16, 124),
+    "cyan": (35, 161, 224),
+}
+```
+
 
 Here's a list of strings for HEX:
-```
+```python
 [
   "#ffffff", // white
   "#000000", // black
@@ -43,8 +61,8 @@ Here's a list of strings for HEX:
 ]
 ```
 Here's a dictionary for HEX:
-```
-colors = {
+```python
+{
     "white": "#ffffff",
     "black": "#000000",
     "green": "#009682",
