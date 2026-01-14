@@ -16,10 +16,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+license = "MIT"
 dependencies = []
-
-[project.optional-dependencies]
-dev = ["pytest>=7.4.2", "matplotlib>=3.6.0"]
 
 [build-system]
 requires = ["hatchling"]
