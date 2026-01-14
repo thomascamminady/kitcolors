@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import overload, Literal
+from typing import Literal, overload
 
 
 class ColorValueError(ValueError):
@@ -45,14 +45,12 @@ class Color:
     @overload
     def RGBa(
         self, alpha: float, transparent: Literal[False]
-    ) -> tuple[float, float, float]:
-        ...
+    ) -> tuple[float, float, float]: ...
 
     @overload
     def RGBa(
         self, alpha: float, transparent: Literal[True]
-    ) -> tuple[int, int, int, float]:
-        ...
+    ) -> tuple[int, int, int, float]: ...
 
     def RGBa(
         self, alpha: float, transparent: bool = True
@@ -73,14 +71,12 @@ class Color:
     @overload
     def rgba(
         self, alpha: float, transparent: Literal[False]
-    ) -> tuple[float, float, float]:
-        ...
+    ) -> tuple[float, float, float]: ...
 
     @overload
     def rgba(
         self, alpha: float, transparent: Literal[True]
-    ) -> tuple[float, float, float, float]:
-        ...
+    ) -> tuple[float, float, float, float]: ...
 
     def rgba(
         self, alpha: float, transparent: bool = True

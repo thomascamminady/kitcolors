@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+
 from kitcolors import kitcolors
 
 if __name__ == "__main__":
@@ -8,7 +9,7 @@ if __name__ == "__main__":
         ax.text(
             -0.8,
             mm - 2 * i,
-            r"{}".format(name),
+            rf"{name}",
             horizontalalignment="right",
             fontsize=25,
             verticalalignment="center",
@@ -53,7 +54,7 @@ if __name__ == "__main__":
                 ax.text(
                     0.8 * j,
                     mm + 2,
-                    r"$\alpha={:.1f}$".format(alpha),
+                    rf"$\alpha={alpha:.1f}$",
                     horizontalalignment="center",
                     fontsize=25,
                     verticalalignment="center",

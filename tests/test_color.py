@@ -1,4 +1,5 @@
 import pytest
+
 from kitcolors import Color
 from kitcolors.color import AlphaValueError, ColorValueError
 
@@ -54,26 +55,32 @@ class TestRgbProperty:
 
 
 class TestValidation:
-    @pytest.mark.parametrize("invalid_rgb", [
-        (-1, 0, 0),
-        (0, -1, 0),
-        (0, 0, -1),
-        (256, 0, 0),
-        (0, 256, 0),
-        (0, 0, 256),
-    ])
+    @pytest.mark.parametrize(
+        "invalid_rgb",
+        [
+            (-1, 0, 0),
+            (0, -1, 0),
+            (0, 0, -1),
+            (256, 0, 0),
+            (0, 256, 0),
+            (0, 0, 256),
+        ],
+    )
     def test_invalid_rgb_raises(self, invalid_rgb):
         with pytest.raises(ColorValueError):
             Color("invalid", invalid_rgb)
 
-    @pytest.mark.parametrize("valid_rgb", [
-        (0, 0, 0),
-        (255, 255, 255),
-        (0, 255, 0),
-    ])
+    @pytest.mark.parametrize(
+        "valid_rgb",
+        [
+            (0, 0, 0),
+            (255, 255, 255),
+            (0, 255, 0),
+        ],
+    )
     def test_valid_rgb_boundary(self, valid_rgb):
         color = Color("valid", valid_rgb)
-        assert color.RGB == valid_rgb
+        assert valid_rgb == color.RGB
 
     @pytest.mark.parametrize("invalid_alpha", [-0.1, 1.1, -1, 2])
     def test_invalid_alpha_rgba(self, invalid_alpha):
