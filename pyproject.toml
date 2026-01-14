@@ -1,18 +1,32 @@
-[tool.poetry]
+[project]
 name = "kitcolors"
 version = "1.6.0"
 description = "Colors of the corporate design of the KIT."
-authors = ["Thomas <0milieux_member@icloud.com>"]
 readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Thomas", email = "0milieux_member@icloud.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
 
-[tool.poetry.dependencies]
-python = ">=3.8"
-
-
-[tool.poetry.group.dev.dependencies]
-matplotlib = "^3.6.0"
-pytest = "^7.4.2"
+[project.optional-dependencies]
+dev = ["pytest>=7.4.2", "matplotlib>=3.6.0"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["kitcolors"]
+
+[dependency-groups]
+dev = ["pytest>=7.4.2", "matplotlib>=3.6.0"]

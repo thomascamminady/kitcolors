@@ -1,4 +1,4 @@
-kitcolors/__pycache__/
-tests/__pycache__/
+__pycache__/
 dist/
-poetry.lock
+.venv/
+*.egg-info/
