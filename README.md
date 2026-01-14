@@ -1,8 +1,8 @@
-
-
 # Colors of the Karlsruhe Institute of Technology (inofficial)
 
-
+[![PyPI version](https://img.shields.io/pypi/v/kitcolors)](https://pypi.org/project/kitcolors/)
+[![Python versions](https://img.shields.io/pypi/pyversions/kitcolors)](https://pypi.org/project/kitcolors/)
+[![License](https://img.shields.io/pypi/l/kitcolors)](https://pypi.org/project/kitcolors/)
 
 Taken from the [KIT corporate design color scheme](https://kit-cd.sts.kit.edu/341.php).
 
