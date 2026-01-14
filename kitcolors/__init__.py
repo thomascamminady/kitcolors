@@ -1,5 +1,22 @@
 from kitcolors.color import Color
 
+__version__ = "1.8.0"
+__all__ = [
+    "Color",
+    "white",
+    "black",
+    "green",
+    "blue",
+    "maygreen",
+    "yellow",
+    "orange",
+    "brown",
+    "red",
+    "purple",
+    "cyan",
+    "kitcolors",
+]
+
 white = Color("white", (255, 255, 255))
 black = Color("black", (0, 0, 0))
 green = Color("green", (0, 150, 130))
