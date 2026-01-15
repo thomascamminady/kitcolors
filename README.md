@@ -1,4 +1,4 @@
-# Colors of the Karlsruhe Institute of Technology (inofficial)
+# Colors of the Karlsruhe Institute of Technology (unofficial)
 
 [![PyPI version](https://img.shields.io/pypi/v/kitcolors)](https://pypi.org/project/kitcolors/)
 [![Python versions](https://img.shields.io/pypi/pyversions/kitcolors)](https://pypi.org/project/kitcolors/)
